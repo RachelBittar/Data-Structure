@@ -1,95 +1,126 @@
 package LinkedList;
 
-public class SingleLinkedList {
+class Node {  //creating nodes [data|node]
+	  public int data;
+	  public Node next;
 
- Node head;  // head of list 
-
- /* Linked list Node*/
-	class Node {
-		int data;
-		Node next;
-		
-		Node(int d) {
-			this.data = d;
-			this.next = null;
-		}
+	  public Node(int data) {  //Node constructor
+	    this.data = data;	   //[5|null]
+	    next = null;
+	  }
 	}
 
- /* Inserts a new Node at front of the list. */
- public void push(int new_data) 
- { 
-  
-     Node new_node = new Node(new_data); 
-     new_node.next = head; 
-     head = new_node; 
- } 
+	class LinkedList {
+		
+	  public Node head; //First Node Head
 
- /* Inserts a new node after the given prev_node. */
- public void insertAfter(Node prev_node, int new_data) 
- { 
-    
-     if (prev_node == null) 
-     { 
-         System.out.println("The given previous node cannot be null"); 
-         return; 
-     } 
+	  public LinkedList(int data) {
+	    Node a = new Node(data);  //[5, null]
+	    head = a;				  // Head = [5, null]	
+	  }
 
-     Node new_node = new Node(new_data); 
-     new_node.next = prev_node.next; 
-     prev_node.next = new_node; 
- } 
-  
- /* Appends a new node at the end.  This method is  
-    defined inside LinkedList class shown above */
- public void append(int new_data) 
- { 
-     Node new_node = new Node(new_data); 
-     if (head == null) { 
-         head = new Node(new_data); 
-         return; 
-     } 
+	  public void traversal() {
+		  
+	    Node temp = head; //temporary pointer to point to head
+	    				  //Temp = Head = [5, null]
+	    
 
-      new_node.next = null; 
+	    while(temp != null) { //This node is not null		
+	      System.out.print(temp.data+"\t");
+	      temp = temp.next;
+	    }
 
-     Node last = head;  
-     while (last.next != null) 
-         last = last.next; 
+	    System.out.println("");
+	  }
 
- 
-     last.next = new_node; 
-     return; 
- } 
+	  // Head = [5, head.next]
+	  // n = [8, null]
+	  
+	  public void insertAtBeginning(Node n) { 
+	    n.next = head; //n = [8|[ [5|head.next->[null]]
+	    head = n;      //
+	  }
 
- /* This function prints contents of linked list starting from 
-     the given node */
- public void printList() 
- { 
-     Node tnode = head; 
-     while (tnode != null) 
-     { 
-         System.out.print(tnode.data+" "); 
-         tnode = tnode.next; 
-     } 
- } 
+	  //insert new node at last
+	  public void insertAtLast(Node n) {
+	    Node temp = head;
 
- /* Driver program to test above functions. Ideally this function 
-    should be in a separate user class.  It is kept here to keep 
-    code compact */
- public static void main(String[] args) 
- { 
-     /* Start with the empty list */
-     SingleLinkedList llist = new SingleLinkedList(); 
- 
-     llist.append(6); 
-     llist.push(7); 
-     llist.push(1); 
-     llist.append(4); 
+	    while(temp.next != null) {
+	      temp = temp.next;
+	    }
 
-     // Insert 8, after 7. So linked list becomes 
-     // 1->7->8->6->4->NUllist 
-     llist.insertAfter(llist.head.next, 8); 
+	    temp.next = n;
+	  }
 
-     System.out.println("\nCreated Linked list is: "); 
-     llist.printList(); 
- } 
-} 
+	  //function to insert a node after a node
+	  public void insertNodeAfter(Node n, Node a) {
+	    n.next = a.next;
+	    a.next = n;
+	  }
+
+	  //function to delete
+	  public void del(Node n) {
+	    Node temp = head;
+	    if(temp == n) { //node to be deleted is head
+	      head = n.next;
+	    }
+	    else { //node to be deleted is not head
+	      while(temp != null) {
+	        if(temp.next == n) { //node previous to node to be deleted
+	          temp.next = n.next;
+	          break; //breaking the loop after deleting the node
+	        }
+	        temp = temp.next;
+	      }
+	    }
+	  }
+	}
+
+	class ListMain {
+		
+	  public static void main(String[] args) {
+	    LinkedList l = new LinkedList(10);
+
+	    Node a,b,c;			//creating nodes
+	    a = new Node(20);   //[20|null]
+	    b = new Node(50);	//[50|null]
+	    c = new Node(60);	//[60|null]
+
+	    //connecting to linked list
+	    /*
+	       ----     ----     ----     ----
+	      |head|-->| a  |-->|  b |-->|  c |-->NULL
+	      |____|   |____|   |____|   |____|
+	    */
+
+	    l.head.next = a;
+	    a.next = b;
+	    b.next = c;
+
+	    l.traversal();
+
+	    Node z;
+
+	    z = new Node(0);
+	    l.insertAtBeginning(z);
+	    z = new Node(-10);
+	    l.insertAtBeginning(z);
+
+	    z = new Node(100);
+	    l.insertAtLast(z);
+
+	    z = new Node(30);
+	    l.insertNodeAfter(z, a);
+	    z = new Node(40);
+	    l.insertNodeAfter(z, a.next);
+	    z = new Node(500);
+	    l.insertNodeAfter(z, a.next.next);
+
+	    l.traversal();
+
+	    l.del(l.head);
+	    l.del(z);
+
+	    l.traversal();
+	  }
+	}
