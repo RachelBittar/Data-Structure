@@ -188,6 +188,13 @@ class LinkedListBetter {
 	
 	}
 
+
+	
+	public boolean iscircular(List<Integer> list) {	
+
+    
+		return true;
+	}
 }
 
 /*
@@ -270,7 +277,6 @@ public class LinkedList {
 		System.out.println("Add at end: " + lb.toList(lb.append(5)));
 		List<Integer> l = lb.toList(n);
 		System.out.println("Reverse: " + lb.toList(lb.reverse(l)));
-		
 
 		System.out.println("Add at front: " + lb.toList(lb.prepend(0))); // adding node at head
 
