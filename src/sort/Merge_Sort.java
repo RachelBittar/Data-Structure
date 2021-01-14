@@ -2,8 +2,12 @@ package sort;
 
 import java.util.Arrays;
 
+import org.junit.Test;
+import org.junit.Assertions.assertTrue;
+
 class Merge {
 	
+	@Test
 	  public static void merge(int a[], int start, int middle, int end) {
 	    int sizeOfTemp1, sizeOfTemp2, i, j, k;
 
@@ -13,6 +17,9 @@ class Merge {
 
 	    int[] temp1 = new int[sizeOfTemp1];
 	    int[] temp2 = new int[sizeOfTemp1];
+	    
+	    assertTrue(false);
+	    
 
 	    for(i=0; i<sizeOfTemp1; i++) {
 	      temp1[i] = a[start+i];
