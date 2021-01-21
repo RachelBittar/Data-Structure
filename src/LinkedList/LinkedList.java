@@ -62,25 +62,20 @@ class LinkedListBetter {
 	Node head = null;
 	Node tail = null;
 
-	public Node createLinkedList(int value) {
-
-		head = new Node(value);
-		return head;
-
-	}
-
 	public Node append(int value) {
-
-		Node new_node = new Node(value); // creating new Node
-		Node node = head; // aux node pointing to head -> otherwise you would
-		// lose reference to head.
-
-		while (node.next != null) { // finding end of linkedlist
-			node = node.next;
+		if (head == null) {
+			head = new Node(value);
+			return head;
 		}
 
-		node.next = new_node; // Adding node to the end of listt
-		return head; // return starting reference
+		tail = head;
+
+		while (tail.next != null) {
+			tail = tail.next;
+		}
+
+		tail.next = new Node(value);
+		return head;
 
 	}
 
@@ -88,6 +83,7 @@ class LinkedListBetter {
 
 		if (head == null)
 			return head;
+		
 		if (position == 0)
 			return head.next; // Remove head
 
@@ -105,13 +101,15 @@ class LinkedListBetter {
 
 	}
 
-	public List<Integer> toList(Node node) {
+	public List<Integer> toList() {
 
 		List<Integer> out = new ArrayList<>();
+		Node aux;
+		aux = head;
 
-		while (node != null) {
-			out.add(node.data);
-			node = node.next;
+		while (aux != null) {
+			out.add(aux.data);
+			aux = aux.next;
 
 		}
 		return out;
@@ -125,26 +123,25 @@ class LinkedListBetter {
 			return node;
 
 		node.next = head;
-		head = node.next;
+		//return node
+		head = node;
 		return head;
 
 	}
 
-	public Node search(int value) {
+	public int search(int value) {
 
 		if (head == null)
-			return null;
+			return -1;
 
 		Node node = head;
 		while (node != null) {
 			if (node.data == value)
-				return node;
+				return node.data;
 			node = node.next;
 		}
 
-		head = node;
-
-		return head;
+		return -1;
 	}
 
 	public int size() {
@@ -164,19 +161,23 @@ class LinkedListBetter {
 
 		Node prev_node = null;
 		Node new_node = null;
-		Node new_list = null;
+	
 
 		for (int value : list) {
-			new_node = new Node(value);
-			new_node.next = prev_node;
-			prev_node = new_node;
+			
+			new_node = new Node(value); // read head -> node
+			new_node.next = prev_node;  // node = null
+			prev_node = new_node;      // null-> new_node
 
-			new_list = prev_node;
+			head = new_node;		
 
 		}
-		return new_list;
+		return head;
 
 	}
+	
+	
+
 	
 	public int pop() {
 	    // Return the first node's value and remove it from the list. 
@@ -184,6 +185,7 @@ class LinkedListBetter {
 	    if (head == null) {
 	        return -1;
 	    }
+	    
 	    return head.data;
 	
 	}
@@ -266,28 +268,29 @@ public class LinkedList {
 
 		LinkedListBetter lb = new LinkedListBetter(); // creating Linked/
 
-		System.out.println("Head: " + lb.toList(lb.createLinkedList(1)));
-		lb.toList(lb.append(0));
-		lb.toList(lb.append(2));
-		lb.toList(lb.append(3)); // Adding node at tail
+		lb.append(1);
+		lb.append(2);
+		lb.append(3); // Adding node at tail
 		
-		Node n = lb.append(4);
+		System.out.println("[Append] Add at end: " + lb.toList());
+		
+		lb.prepend(0);
+		System.out.println("[Prepend]Add at front: " + lb.toList());
 		
 		
-		System.out.println("Add at end: " + lb.toList(lb.append(5)));
-		List<Integer> l = lb.toList(n);
-		System.out.println("Reverse: " + lb.toList(lb.reverse(l)));
+		lb.reverse(lb.toList());
+		System.out.println("Reverse: " + lb.toList());
 
-		System.out.println("Add at front: " + lb.toList(lb.prepend(0))); // adding node at head
+		
+		System.out.println("Search found: " + lb.search(1));
 
-		System.out.println("Search found: " + lb.toList(lb.search(5)));
-
-		System.out.println("Delete: " + lb.toList(lb.deleteNode(2)));
+		lb.deleteNode(3);
+		System.out.println("Delete: " + lb.toList());
 
 		System.out.println("Size: " + lb.size());
 		
 		System.out.println("Pop: " + lb.pop());
-
+//
 
 
 		System.out.println("*-----------DoublyLinkedList-------------*");

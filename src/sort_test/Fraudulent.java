@@ -30,7 +30,7 @@ public class Fraudulent {
         	avg = sum/(float)5; 
         	System.out.println("Primeira media "+avg);
         	
-        	else {
+        
 	        	if(expenditure[i]>=(2*avg)) {
 	        		System.out.println(avg+" "+expenditure[i]);
 	        			try{

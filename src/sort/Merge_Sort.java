@@ -3,7 +3,7 @@ package sort;
 import java.util.Arrays;
 
 import org.junit.Test;
-import org.junit.Assertions.assertTrue;
+
 
 class Merge {
 	
@@ -18,7 +18,7 @@ class Merge {
 	    int[] temp1 = new int[sizeOfTemp1];
 	    int[] temp2 = new int[sizeOfTemp1];
 	    
-	    assertTrue(false);
+	   // assertTrue(false);
 	    
 
 	    for(i=0; i<sizeOfTemp1; i++) {
