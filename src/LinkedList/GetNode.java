@@ -68,19 +68,23 @@ public class GetNode {
      */
     static int getNode(SinglyLinkedListNode head, int positionFromTail) {
     	
+    
     	
-    	SinglyLinkedListNode node = head;
+    	SinglyLinkedListNode node = head; //node = 3 -> 2 -> 1
     	int counter =0;
     	
     	
-    	while(head!=null) {
-    		head = head.next;
+    	while(head!=null) {	 	//head = 3 -> 2 -> 1	
+    		head = head.next;   //head = 2 -> 1
+    							//head = 1
+    							//head = null;
     		
+    		// 0 < 3 -> 1 < 3 -> 2 < 3  [3 < 3]
     		if(counter < positionFromTail+1) {
-    			counter++; 
+    			counter++;  //1 -> 3 
     		}
-    		else if(head != null) {
-    			node = node.next;
+    		else if(head != null) { //head 2 -> head 1
+    			node = node.next; // node = 2 -> node 1;
     		}
     	}
 
