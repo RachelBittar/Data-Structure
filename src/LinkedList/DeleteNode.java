@@ -75,8 +75,15 @@ public class DeleteNode {
     	   
     	   SinglyLinkedListNode current_node = head;
     	   
+    	   
+    	   //counter starts on tail: zero 
+    	   //current_code start from head:
+    	   
+    	   //position given - head = tail
+    	   
     	   while(counter<position -1) {
-    		   
+    		
+    		   //finding node to be delete
     		   current_node=current_node.next;
     		   counter++;
     		   

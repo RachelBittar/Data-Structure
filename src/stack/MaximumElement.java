@@ -1,6 +1,8 @@
 package stack;
 
 import java.util.Arrays;
+import java.util.Scanner;
+
 
 class Stack{
 	
@@ -26,17 +28,17 @@ class Stack{
     	this.num_elements += 1;
     } 
     
-    public static void main(String[] args) {
-		// TODO Auto-generated method stub
-    	
-    	Stack foo = new Stack(1);
-    	
-    	
-    	foo.push(5);
-    	foo.push(15);
-    	String str = Arrays.toString(foo.arr);
-    	System.out.println(str);
-
-	}
 }
+public class MaximumElement {
 
+	public static void main(String[] args) {
+		
+		 Scanner sc = new Scanner(System.in);
+		    int n = sc.nextInt();
+		    int max = Integer.MIN_VALUE;
+		    
+		    Stack StackNode  = new Stack();
+    }
+
+
+}

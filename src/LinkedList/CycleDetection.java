@@ -75,14 +75,14 @@ public class CycleDetection {
         SinglyLinkedListNode slow = head;
         SinglyLinkedListNode fast = head;
         
-        while (fast!= null && fast.next!=null){
+        while (fast!=null && fast.next!=null){
 
         	slow = slow.next;
         	fast = fast.next.next;
             	
             if (slow == fast)
                   return true;
-            }
+         }
    
        
         return false;
@@ -131,10 +131,10 @@ public class CycleDetection {
             boolean result = hasCycle(llist.head);
 
             System.out.println((result ? 1 : 0));
-           // bufferedWriter.newLine();
+            bufferedWriter.newLine();
         }
 
-       // bufferedWriter.close();
+        bufferedWriter.close();
 
         scanner.close();
     }

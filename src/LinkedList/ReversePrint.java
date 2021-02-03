@@ -67,15 +67,14 @@ public class ReversePrint {
      */
     static void reversePrint(SinglyLinkedListNode head) {
     	
-    	 if (head == null) { 
+    	 if (head == null) 
     		 return; 
-    		 }
-    	    else {
-    	        reversePrint(head.next);
-    	        System.out.println(head.data);
+    		
+    	 reversePrint(head.next);
+    	 System.out.println(head.data);
     	        return;
-    	    }
-    	}
+    	    
+   }
        
 
 

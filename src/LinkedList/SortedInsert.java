@@ -47,6 +47,12 @@ public class SortedInsert {
     public static void printDoublyLinkedList(DoublyLinkedListNode node) throws IOException {
         while (node != null) {
             System.out.println(String.valueOf(node.data));
+            
+            node = node.next;
+
+            //if (node != null) {
+                //bufferedWriter.write(sep);
+            //}
 
             
         }
