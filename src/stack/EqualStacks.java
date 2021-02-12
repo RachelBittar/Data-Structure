@@ -21,6 +21,20 @@ class Result {
      */
 
     public static int equalStacks(List<Integer> h1, List<Integer> h2, List<Integer> h3) {
+    	
+    Stack<Integer> s1 = new Stack<Integer>();
+    Stack<Integer> s2 = new Stack<Integer>(); 
+    Stack<Integer> s3 = new Stack<Integer>(); 
+    
+    int n1 = 0;
+    int n2 = 0; 
+    int n3 = 0; 
+
+    int minStack; 
+    
+    
+    	
+    	
     return 0;
 
     }

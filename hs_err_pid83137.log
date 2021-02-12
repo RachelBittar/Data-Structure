@@ -1,7 +1,7 @@
 #
 # A fatal error has been detected by the Java Runtime Environment:
 #
-#  SIGSEGV (0xb) at pc=0x0000000106e4ec3c, pid=38234, tid=0x0000000000004907
+#  SIGSEGV (0xb) at pc=0x000000010624ec3c, pid=83137, tid=0x0000000000003707
 #
 # JRE version: Java(TM) SE Runtime Environment (8.0_221-b11) (build 1.8.0_221-b11)
 # Java VM: Java HotSpot(TM) 64-Bit Server VM (25.221-b11 mixed mode bsd-amd64 compressed oops)
@@ -16,79 +16,79 @@
 
 ---------------  T H R E A D  ---------------
 
-Current thread (0x00007f85bc01c000):  JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_vm, id=18695, stack(0x000070000eacd000,0x000070000ebcd000)]
+Current thread (0x00007fe82100b000):  JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_vm, id=14087, stack(0x00007000041ce000,0x00007000042ce000)]
 
-siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x000000000e18f430
+siginfo: si_signo: 11 (SIGSEGV), si_code: 0 (unknown), si_addr: 0x0000000000000000
 
 Registers:
-RAX=0x000000000e18f430, RBX=0x000070000ebcbd90, RCX=0x000000010cf160c0, RDX=0x0000000113fd4620
-RSP=0x000070000ebcbd00, RBP=0x000070000ebcbd20, RSI=0x00007f85bdb35618, RDI=0x00007f85bdb35618
-R8 =0x00007f85bdb356a8, R9 =0x000070000ebcbe20, R10=0x000070000e126990, R11=0xfffff07a51096778
-R12=0x000070000ebcbd90, R13=0x00007f85bc01c000, R14=0x000070000ebcbdc0, R15=0x00007f85bdb35618
-RIP=0x0000000106e4ec3c, EFLAGS=0x0000000000010246, ERR=0x0000000000000004
-  TRAPNO=0x000000000000000e
+RAX=0x4855c35de5894855, RBX=0x00007000042ccd90, RCX=0x4855c35dc031e589, RDX=0x0000000114e36620
+RSP=0x00007000042ccd00, RBP=0x00007000042ccd20, RSI=0x00007fe82170a018, RDI=0x00007fe82170a018
+R8 =0x00007fe82170a0a8, R9 =0x00007000042cce20, R10=0x00007000037d8b30, R11=0xfffff017e2bc2d78
+R12=0x00007000042ccd90, R13=0x00007fe82100b000, R14=0x00007000042ccdc0, R15=0x00007fe82170a018
+RIP=0x000000010624ec3c, EFLAGS=0x0000000000010246, ERR=0x0000000000000000
+  TRAPNO=0x000000000000000d
 
-Top of Stack: (sp=0x000070000ebcbd00)
-0x000070000ebcbd00:   000070000ebcbdc0 00007f85b9c07cf0
-0x000070000ebcbd10:   000070000ebcbd90 000070000ebcc3b0
-0x000070000ebcbd20:   000070000ebcbd80 0000000106e4d640
-0x000070000ebcbd30:   000070000ebcbd70 0000000106e4e9c4
-0x000070000ebcbd40:   0000000000007fe8 000070000ebcbe10
-0x000070000ebcbd50:   000070000ebcbe10 00007f85bdb35010
-0x000070000ebcbd60:   00007f85b9c07cf0 00007f85bdb35610
-0x000070000ebcbd70:   0000000000000f53 000070000ebcc3b0
-0x000070000ebcbd80:   000070000ebcc380 00000001071aefa2
-0x000070000ebcbd90:   000070000e18f390 000000010cf160c0
-0x000070000ebcbda0:   0000000000000000 0000000100000000
-0x000070000ebcbdb0:   000000000e18f430 000070000e18f390
-0x000070000ebcbdc0:   0000000000000000 0000000000000000
-0x000070000ebcbdd0:   0000000000000000 0000000000000000
-0x000070000ebcbde0:   0000000000000000 0000000000000000
-0x000070000ebcbdf0:   0000000000000000 0000000000000000
-0x000070000ebcbe00:   0000000000000000 0000000000000000
-0x000070000ebcbe10:   000070000e126990 000070000e126990
-0x000070000ebcbe20:   0000000000000000 0000000000000000
-0x000070000ebcbe30:   0000000000000000 0000000000000000
-0x000070000ebcbe40:   0000000000000000 0000000000000000
-0x000070000ebcbe50:   0000000000000000 0000000000000000
-0x000070000ebcbe60:   0000000000000000 0000000000000000
-0x000070000ebcbe70:   0000000000000000 0000000000000000
-0x000070000ebcbe80:   0000000000000000 0000000000000000
-0x000070000ebcbe90:   0000000000000000 0000000000000000
-0x000070000ebcbea0:   0000000000000000 0000000000000000
-0x000070000ebcbeb0:   0000000000000000 0000000000000000
-0x000070000ebcbec0:   0000000000000000 0000000000000000
-0x000070000ebcbed0:   0000000000000000 0000000000000000
-0x000070000ebcbee0:   0000000000000000 0000000000000000
-0x000070000ebcbef0:   0000000000000000 0000000000000000 
+Top of Stack: (sp=0x00007000042ccd00)
+0x00007000042ccd00:   00007000042ccdc0 00007fe8205048f0
+0x00007000042ccd10:   00007000042ccd90 00007000042cd3b0
+0x00007000042ccd20:   00007000042ccd80 000000010624d640
+0x00007000042ccd30:   00007000042ccd70 000000010624e9c4
+0x00007000042ccd40:   0000000000007fe8 00007000042cce10
+0x00007000042ccd50:   00007000042cce10 00007fe821709a10
+0x00007000042ccd60:   00007fe8205048f0 00007fe82170a010
+0x00007000042ccd70:   00000000000011d9 00007000042cd3b0
+0x00007000042ccd80:   00007000042cd380 00000001065aefa2
+0x00007000042ccd90:   00000001061c27d6 4855c35dc031e589
+0x00007000042ccda0:   0000000000000000 0000000100000000
+0x00007000042ccdb0:   4855c35de5894855 00000001061c27d6
+0x00007000042ccdc0:   0000000000000000 0000000000000000
+0x00007000042ccdd0:   0000000000000000 0000000000000000
+0x00007000042ccde0:   0000000000000000 0000000000000000
+0x00007000042ccdf0:   0000000000000000 0000000000000000
+0x00007000042cce00:   0000000000000000 0000000000000000
+0x00007000042cce10:   00007000037d8b30 00007000037d8b30
+0x00007000042cce20:   0000000000000000 0000000000000000
+0x00007000042cce30:   0000000000000000 0000000000000000
+0x00007000042cce40:   0000000000000000 0000000000000000
+0x00007000042cce50:   0000000000000000 0000000000000000
+0x00007000042cce60:   0000000000000000 0000000000000000
+0x00007000042cce70:   0000000000000000 0000000000000000
+0x00007000042cce80:   0000000000000000 0000000000000000
+0x00007000042cce90:   0000000000000000 0000000000000000
+0x00007000042ccea0:   0000000000000000 0000000000000000
+0x00007000042cceb0:   0000000000000000 0000000000000000
+0x00007000042ccec0:   0000000000000000 0000000000000000
+0x00007000042cced0:   0000000000000000 0000000000000000
+0x00007000042ccee0:   0000000000000000 0000000000000000
+0x00007000042ccef0:   0000000000000000 0000000000000000 
 
-Instructions: (pc=0x0000000106e4ec3c)
-0x0000000106e4ec1c:   fd ff ff eb 77 49 83 7f 10 00 74 10 4c 89 e7 4c
-0x0000000106e4ec2c:   89 fe 4c 89 f2 e8 06 fe ff ff eb 60 49 8b 47 20
-0x0000000106e4ec3c:   48 8b 08 48 8b 78 08 48 83 c0 10 49 89 04 24 49
-0x0000000106e4ec4c:   89 44 24 28 49 89 4c 24 20 49 89 7c 24 08 e8 83 
+Instructions: (pc=0x000000010624ec3c)
+0x000000010624ec1c:   fd ff ff eb 77 49 83 7f 10 00 74 10 4c 89 e7 4c
+0x000000010624ec2c:   89 fe 4c 89 f2 e8 06 fe ff ff eb 60 49 8b 47 20
+0x000000010624ec3c:   48 8b 08 48 8b 78 08 48 83 c0 10 49 89 04 24 49
+0x000000010624ec4c:   89 44 24 28 49 89 4c 24 20 49 89 7c 24 08 e8 83 
 
 Register to memory mapping:
 
-RAX=0x000000000e18f430 is an unknown value
-RBX=0x000070000ebcbd90 is pointing into the stack for thread: 0x00007f85bc01c000
-RCX={method} {0x000000010cf160c0} 'binaryD' '(II[I)I' in 'tree/GM'
-RDX=0x0000000113fd4620 is pointing into interpreter code (not bytecode specific)
-RSP=0x000070000ebcbd00 is pointing into the stack for thread: 0x00007f85bc01c000
-RBP=0x000070000ebcbd20 is pointing into the stack for thread: 0x00007f85bc01c000
-RSI=0x00007f85bdb35618 is an unknown value
-RDI=0x00007f85bdb35618 is an unknown value
-R8 =0x00007f85bdb356a8 is an unknown value
-R9 =0x000070000ebcbe20 is pointing into the stack for thread: 0x00007f85bc01c000
-R10=0x000070000e126990 is pointing into the stack for thread: 0x00007f85ba00b000
-R11=0xfffff07a51096778 is an unknown value
-R12=0x000070000ebcbd90 is pointing into the stack for thread: 0x00007f85bc01c000
-R13=0x00007f85bc01c000 is a thread
-R14=0x000070000ebcbdc0 is pointing into the stack for thread: 0x00007f85bc01c000
-R15=0x00007f85bdb35618 is an unknown value
+RAX=0x4855c35de5894855 is an unknown value
+RBX=0x00007000042ccd90 is pointing into the stack for thread: 0x00007fe82100b000
+RCX=0x4855c35dc031e589 is an unknown value
+RDX=0x0000000114e36620 is an unknown value
+RSP=0x00007000042ccd00 is pointing into the stack for thread: 0x00007fe82100b000
+RBP=0x00007000042ccd20 is pointing into the stack for thread: 0x00007fe82100b000
+RSI=0x00007fe82170a018 is an unknown value
+RDI=0x00007fe82170a018 is an unknown value
+R8 =0x00007fe82170a0a8 is an unknown value
+R9 =0x00007000042cce20 is pointing into the stack for thread: 0x00007fe82100b000
+R10=0x00007000037d8b30 is pointing into the stack for thread: 0x00007fe82180a000
+R11=0xfffff017e2bc2d78 is an unknown value
+R12=0x00007000042ccd90 is pointing into the stack for thread: 0x00007fe82100b000
+R13=0x00007fe82100b000 is a thread
+R14=0x00007000042ccdc0 is pointing into the stack for thread: 0x00007fe82100b000
+R15=0x00007fe82170a018 is an unknown value
 
 
-Stack: [0x000070000eacd000,0x000070000ebcd000],  sp=0x000070000ebcbd00,  free space=1019k
+Stack: [0x00007000041ce000,0x00007000042ce000],  sp=0x00007000042ccd00,  free space=1019k
 Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
 V  [libjvm.dylib+0x24ec3c]  frame::sender(RegisterMap*) const+0x78
 V  [libjvm.dylib+0x24d640]  frame::real_sender(RegisterMap*) const+0x1e
@@ -113,26 +113,26 @@ C  0x0000000000000000
 ---------------  P R O C E S S  ---------------
 
 Java Threads: ( => current thread )
-  0x00007f85bda52800 JavaThread "SIGTERM handler" daemon [_thread_blocked, id=13831, stack(0x000070000ecd3000,0x000070000edd3000)]
-  0x00007f85bb874000 JavaThread "Service Thread" daemon [_thread_blocked, id=14851, stack(0x000070000f0df000,0x000070000f1df000)]
-  0x00007f85ba83c800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=16899, stack(0x000070000efdc000,0x000070000f0dc000)]
-  0x00007f85ba80e000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=14339, stack(0x000070000eed9000,0x000070000efd9000)]
-  0x00007f85bb86b800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=17411, stack(0x000070000edd6000,0x000070000eed6000)]
-  0x00007f85bc030800 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=18179, stack(0x000070000ebd0000,0x000070000ecd0000)]
-=>0x00007f85bc01c000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_vm, id=18695, stack(0x000070000eacd000,0x000070000ebcd000)]
-  0x00007f85bb832800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13315, stack(0x000070000e9ca000,0x000070000eaca000)]
-  0x00007f85bc01a800 JavaThread "Finalizer" daemon [_thread_blocked, id=20995, stack(0x000070000e7c1000,0x000070000e8c1000)]
-  0x00007f85bb815800 JavaThread "Reference Handler" daemon [_thread_blocked, id=21251, stack(0x000070000e6be000,0x000070000e7be000)]
-  0x00007f85ba00b000 JavaThread "main" [_thread_blocked, id=3331, stack(0x000070000e0ac000,0x000070000e1ac000)]
+  0x00007fe820852000 JavaThread "SIGTERM handler" daemon [_thread_blocked, id=18439, stack(0x0000700003fc5000,0x00007000040c5000)]
+  0x00007fe82282d800 JavaThread "Service Thread" daemon [_thread_blocked, id=16899, stack(0x00007000047e0000,0x00007000048e0000)]
+  0x00007fe821831000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=17411, stack(0x00007000046dd000,0x00007000047dd000)]
+  0x00007fe820853000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=17667, stack(0x00007000045da000,0x00007000046da000)]
+  0x00007fe821033800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=18179, stack(0x00007000044d7000,0x00007000045d7000)]
+  0x00007fe82101b000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=18691, stack(0x00007000042d1000,0x00007000043d1000)]
+=>0x00007fe82100b000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_vm, id=14087, stack(0x00007000041ce000,0x00007000042ce000)]
+  0x00007fe82084f800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13571, stack(0x00007000040cb000,0x00007000041cb000)]
+  0x00007fe820820000 JavaThread "Finalizer" daemon [_thread_blocked, id=21251, stack(0x0000700003e3f000,0x0000700003f3f000)]
+  0x00007fe820818000 JavaThread "Reference Handler" daemon [_thread_blocked, id=21507, stack(0x0000700003d3c000,0x0000700003e3c000)]
+  0x00007fe82180a000 JavaThread "main" [_thread_blocked, id=3331, stack(0x000070000372a000,0x000070000382a000)]
 
 Other Threads:
-  0x00007f85ba01b000 VMThread [stack: 0x000070000e5bb000,0x000070000e6bb000] [id=21507]
+  0x00007fe82182e800 VMThread [stack: 0x0000700003c39000,0x0000700003d39000] [id=11267]
 
 VM state:synchronizing (normal execution)
 
 VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
-[0x00007f85b9f05820] Threads_lock - owner thread: 0x00007f85ba01b000
-[0x00007f85b9f06220] Compile_lock - owner thread: 0x00007f85ba00b000
+[0x00007fe8204108a0] Threads_lock - owner thread: 0x00007fe82182e800
+[0x00007fe8204112a0] Compile_lock - owner thread: 0x00007fe82180a000
 
 OutOfMemory and StackOverflow Exception counts:
 StackOverflowErrors=1
@@ -142,39 +142,39 @@ Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
 Compressed class space size: 1073741824 Address: 0x00000007c0000000
 
 Heap:
- PSYoungGen      total 38400K, used 7389K [0x0000000795580000, 0x0000000798000000, 0x00000007c0000000)
-  eden space 33280K, 22% used [0x0000000795580000,0x0000000795cb74c0,0x0000000797600000)
+ PSYoungGen      total 38400K, used 7388K [0x0000000795580000, 0x0000000798000000, 0x00000007c0000000)
+  eden space 33280K, 22% used [0x0000000795580000,0x0000000795cb7288,0x0000000797600000)
   from space 5120K, 0% used [0x0000000797b00000,0x0000000797b00000,0x0000000798000000)
   to   space 5120K, 0% used [0x0000000797600000,0x0000000797600000,0x0000000797b00000)
  ParOldGen       total 87552K, used 0K [0x0000000740000000, 0x0000000745580000, 0x0000000795580000)
   object space 87552K, 0% used [0x0000000740000000,0x0000000740000000,0x0000000745580000)
- Metaspace       used 4896K, capacity 5010K, committed 5248K, reserved 1056768K
-  class space    used 513K, capacity 561K, committed 640K, reserved 1048576K
+ Metaspace       used 4901K, capacity 5010K, committed 5248K, reserved 1056768K
+  class space    used 514K, capacity 561K, committed 640K, reserved 1048576K
 
-Card table byte_map: [0x0000000107ff2000,0x00000001083f3000] byte_map_base: 0x00000001045f2000
+Card table byte_map: [0x0000000107379000,0x000000010777a000] byte_map_base: 0x0000000103979000
 
-Marking Bits: (ParMarkBitMap*) 0x00000001074fbe40
- Begin Bits: [0x000000010869e000, 0x000000010a69e000)
- End Bits:   [0x000000010a69e000, 0x000000010c69e000)
+Marking Bits: (ParMarkBitMap*) 0x00000001068fbe40
+ Begin Bits: [0x0000000107a25000, 0x0000000109a25000)
+ End Bits:   [0x0000000109a25000, 0x000000010ba25000)
 
-Polling page: 0x00000001063b4000
+Polling page: 0x0000000105724000
 
-CodeCache: size=245760Kb used=1327Kb max_used=1329Kb free=244432Kb
- bounds [0x0000000113fcf000, 0x000000011423f000, 0x0000000122fcf000]
- total_blobs=399 nmethods=115 adapters=206
+CodeCache: size=245760Kb used=1322Kb max_used=1329Kb free=244437Kb
+ bounds [0x0000000114df1000, 0x0000000115061000, 0x0000000123df1000]
+ total_blobs=397 nmethods=113 adapters=206
  compilation: enabled
 
 Compilation events (10 events):
-Event: 1.294 Thread 0x00007f85ba83c800  111       3       java.util.Hashtable$Entry::<init> (26 bytes)
-Event: 1.294 Thread 0x00007f85ba83c800 nmethod 111 0x000000011411ab50 code [0x000000011411acc0, 0x000000011411aeb0]
-Event: 1.295 Thread 0x00007f85ba83c800  112       3       org.eclipse.jdt.launching.internal.org.objectweb.asm.ClassReader::readUnsignedShort (26 bytes)
-Event: 1.295 Thread 0x00007f85ba83c800 nmethod 112 0x000000011411a710 code [0x000000011411a880, 0x000000011411aa30]
-Event: 1.295 Thread 0x00007f85ba83c800  113       3       java.util.concurrent.ConcurrentHashMap::spread (10 bytes)
-Event: 1.295 Thread 0x00007f85ba83c800 nmethod 113 0x000000011411a410 code [0x000000011411a560, 0x000000011411a6b0]
-Event: 1.298 Thread 0x00007f85ba83c800  114       3       java.nio.Buffer::checkIndex (22 bytes)
-Event: 1.298 Thread 0x00007f85ba83c800 nmethod 114 0x00000001141198d0 code [0x0000000114119a60, 0x0000000114119d08]
-Event: 1.298 Thread 0x00007f85ba83c800  115       3       java.nio.DirectLongBufferU::ix (10 bytes)
-Event: 1.299 Thread 0x00007f85ba83c800 nmethod 115 0x0000000114119590 code [0x00000001141196e0, 0x0000000114119850]
+Event: 0.985 Thread 0x00007fe821831000 nmethod 108 0x0000000114f39610 code [0x0000000114f397c0, 0x0000000114f39e48]
+Event: 0.988 Thread 0x00007fe820853000 nmethod 105 0x0000000114f3d550 code [0x0000000114f3d6c0, 0x0000000114f3d9d8]
+Event: 0.988 Thread 0x00007fe821831000  110       3       org.eclipse.jdt.launching.internal.org.objectweb.asm.ByteVector::putShort (52 bytes)
+Event: 0.988 Thread 0x00007fe821831000 nmethod 110 0x0000000114f3d010 code [0x0000000114f3d180, 0x0000000114f3d3e8]
+Event: 0.988 Thread 0x00007fe821831000  111       3       java.nio.Buffer::checkIndex (22 bytes)
+Event: 0.989 Thread 0x00007fe821831000 nmethod 111 0x0000000114f3cad0 code [0x0000000114f3cc60, 0x0000000114f3cf08]
+Event: 973.385 Thread 0x00007fe821831000  112       3       org.eclipse.jdt.launching.internal.org.objectweb.asm.ByteVector::putByte (39 bytes)
+Event: 973.386 Thread 0x00007fe821831000 nmethod 112 0x0000000114f3c5d0 code [0x0000000114f3c740, 0x0000000114f3c988]
+Event: 973.386 Thread 0x00007fe821831000  113       3       org.eclipse.jdt.launching.internal.org.objectweb.asm.SymbolTable::get (13 bytes)
+Event: 973.386 Thread 0x00007fe821831000 nmethod 113 0x0000000114f3c1d0 code [0x0000000114f3c340, 0x0000000114f3c4f0]
 
 GC Heap History (0 events):
 No events
@@ -182,25 +182,25 @@ No events
 Deoptimization events (0 events):
 No events
 
-Classes redefined (0 events):
-No events
+Classes redefined (1 events):
+Event: 973.389 Thread 0x00007fe82182e800 redefined class name=BasicAlgorithms.Recursive_binary_search, count=1
 
 Internal exceptions (3 events):
-Event: 0.151 Thread 0x00007f85ba00b000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x0000000795587cb8) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u221/13320/hotsp
-Event: 0.152 Thread 0x00007f85ba00b000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x0000000795587fa0) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u221/13320/hotspot/src/share/vm/pr
-Event: 12.693 Thread 0x00007f85ba00b000 Exception <a 'java/lang/StackOverflowError'> (0x0000000795b602d0) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u221/13320/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 325]
+Event: 0.069 Thread 0x00007fe82180a000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x0000000795587cb8) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u221/13320/hotsp
+Event: 0.069 Thread 0x00007fe82180a000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x0000000795587fa0) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u221/13320/hotspot/src/share/vm/pr
+Event: 1041.183 Thread 0x00007fe82180a000 Exception <a 'java/lang/StackOverflowError'> (0x0000000795b639c0) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u221/13320/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 325]
 
 Events (10 events):
-Event: 12.685 Executing VM operation: EnterInterpOnlyMode
-Event: 12.685 Executing VM operation: EnterInterpOnlyMode done
-Event: 51.808 Thread 0x00007f85bb834800 Thread exited: 0x00007f85bb834800
-Event: 51.878 loading class sun/misc/Signal$1
-Event: 51.881 loading class sun/misc/Signal$1 done
-Event: 51.881 Thread 0x00007f85bda52800 Thread added: 0x00007f85bda52800
-Event: 51.881 loading class java/lang/Shutdown
-Event: 51.882 loading class java/lang/Shutdown done
-Event: 51.882 loading class java/lang/Shutdown$Lock
-Event: 51.882 loading class java/lang/Shutdown$Lock done
+Event: 1041.177 Executing VM operation: EnterInterpOnlyMode
+Event: 1041.177 Executing VM operation: EnterInterpOnlyMode done
+Event: 1056.547 Thread 0x00007fe820852000 Thread exited: 0x00007fe820852000
+Event: 1059.575 loading class sun/misc/Signal$1
+Event: 1059.575 loading class sun/misc/Signal$1 done
+Event: 1059.576 Thread 0x00007fe820852000 Thread added: 0x00007fe820852000
+Event: 1059.576 loading class java/lang/Shutdown
+Event: 1059.577 loading class java/lang/Shutdown done
+Event: 1059.577 loading class java/lang/Shutdown$Lock
+Event: 1059.577 loading class java/lang/Shutdown$Lock done
 
 
 Dynamic libraries:
@@ -441,19 +441,19 @@ Dynamic libraries:
 0x00007fff5560e000 	/System/Library/PrivateFrameworks/KeychainCircle.framework/Versions/A/KeychainCircle
 0x00007fff2fb10000 	/System/Library/Frameworks/CoreBluetooth.framework/Versions/A/CoreBluetooth
 0x00007fff5fe85000 	/System/Library/PrivateFrameworks/SpeechRecognitionCore.framework/Versions/A/SpeechRecognitionCore
-0x0000000106c00000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/server/libjvm.dylib
+0x0000000106000000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/server/libjvm.dylib
 0x00007fff69425000 	/usr/lib/libstdc++.6.dylib
-0x0000000106370000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libverify.dylib
-0x000000010637e000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libjava.dylib
-0x00000001063b5000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libjdwp.dylib
-0x0000000107bb9000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libnpt.dylib
-0x0000000107bbd000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libinstrument.dylib
-0x0000000107c29000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libzip.dylib
-0x000000010f009000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libdt_socket.dylib
+0x00000001056e0000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libverify.dylib
+0x00000001056ee000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libjava.dylib
+0x0000000105725000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libjdwp.dylib
+0x0000000105770000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libnpt.dylib
+0x0000000105774000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libinstrument.dylib
+0x00000001057e0000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libzip.dylib
+0x00000001057f9000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/libdt_socket.dylib
 
 VM Arguments:
-jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:64048 -javaagent:/Users/rachelbittar/eclipse/jee-2019-09/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/404/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 
-java_command: tree.GM
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:53308 -javaagent:/Users/rachelbittar/eclipse/jee-2019-09/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/404/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 
+java_command: BasicAlgorithms.Recursive_binary_search
 java_class_path (initial): /Users/rachelbittar/eclipse-workspace/Data-Structure-exerciese/bin:/Users/rachelbittar/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar:/Users/rachelbittar/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar:/Users/rachelbittar/eclipse/jee-2019-09/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/404/0/.cp/lib/javaagent-shaded.jar
 Launcher Type: SUN_STANDARD
 
@@ -480,18 +480,18 @@ SIGQUIT: [libjvm.dylib+0x48a9a5], sa_mask[0]=11111111011111110111111111111111, s
 
 OS:Bsduname:Darwin 19.6.0 Darwin Kernel Version 19.6.0: Thu Jun 18 20:49:00 PDT 2020; root:xnu-6153.141.1~1/RELEASE_X86_64 x86_64
 rlimit: STACK 8192k, CORE 0k, NPROC 1392, NOFILE 10240, AS infinity
-load average:3.94 4.03 4.92
+load average:7.95 6.32 6.30
 
 CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 61 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
 
-Memory: 4k page, physical 8388608k(17636k free)
+Memory: 4k page, physical 8388608k(156668k free)
 
 /proc/meminfo:
 
 
 vm_info: Java HotSpot(TM) 64-Bit Server VM (25.221-b11) for bsd-amd64 JRE (1.8.0_221-b11), built on Jul  4 2019 04:36:22 by "java_re" with gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
 
-time: Mon Feb  1 18:11:45 2021
+time: Fri Feb  5 16:16:21 2021
 timezone: EST
-elapsed time: 51 seconds (0d 0h 0m 51s)
+elapsed time: 1059 seconds (0d 0h 17m 39s)
 

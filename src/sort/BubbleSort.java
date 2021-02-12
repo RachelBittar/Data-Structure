@@ -1,51 +1,30 @@
 package sort;
 
-
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
-public class BubbleSort {
 
-    // Complete the countSwaps function below.
-    static int[] countSwaps(int[] a) {
-    	
-    	int aux=0;
-    	boolean swapped = false;
+public class BubbleSort { // O(n2)
 
-    	for (int i = 0; i < a.length; i++) { 
-    		swapped = false;
-    		
-    	    for (int j = 0; j < a.length-i-1; j++) {  	    	
-    	        if (a[j] > a[j + 1]) {     
-    	        	aux	= a[j+1];
-					a[j+1]=a[j];
-					a[j]=aux;
-					swapped = true;
-    	        }
-    	    }
-    	    
-    	    if(!swapped) {
-    	    	System.out.println("BREAK");
-    	    	break;
-    	    }
-    	        
-    	}
-    	//System.out.println("Array : "+Arrays.toString(a));
+	public static void main(String[] args) {
+		int[] a = { 8, 3, 1, 7, 0 };
+		System.out.println("1 " + Arrays.toString(bubble_sort_1(a)));
+		System.out.println("2 " + Arrays.toString(bubble_sort_1(a)));
+		System.out.println("3 " + Arrays.toString(bubble_sort_1(a)));
+		System.out.println("4 " + Arrays.toString(bubble_sort_1(a)));
 
-    	return  a;
-	  
-    }
+	}
 
-    public static void main(String[] args) {
-        int[] a= {4, 8, 1, 3, 10, 9, 2, 11, 5, 6};
-        System.out.println(Arrays.toString(countSwaps(a)));
-        
-    }
+	public static int[] bubble_sort_1(int[] a) {
+
+		int temp = 0;
+		for (int i = 0; i < a.length - 1; i++) {
+
+			if (a[i] > a[i + 1]) {
+				temp = a[i];
+				a[i] = a[i + 1];
+				a[i + 1] = temp;
+			}
+		}
+		return a;
+	}
 }
-
-

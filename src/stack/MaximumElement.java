@@ -1,44 +1,48 @@
 package stack;
 
-import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Stack;
 
-
-class Stack{
-	
-	int initial_size=0;
-	int next_index=0;
-	int num_elements=0;
-	int[]arr = null;
-    
-    Stack(int initial_size){
-        this.arr = new int[initial_size];
-        this.next_index = 0; //top
-        this.num_elements = 0; //how many items on the stack
-    
-    }
-    
-    public void push(int data) {
-    	
-        if (this.next_index == (this.arr).length)
-            System.out.println("Out of space! Increasing array capacity ...");
-    	
-    	this.arr[this.next_index] = data;
-    	this.next_index += 1;
-    	this.num_elements += 1;
-    } 
-    
-}
 public class MaximumElement {
 
 	public static void main(String[] args) {
 		
-		 Scanner sc = new Scanner(System.in);
-		    int n = sc.nextInt();
-		    int max = Integer.MIN_VALUE;
-		    
-		    Stack StackNode  = new Stack();
-    }
+		Stack<Integer> stack    = new Stack<Integer>();
+	    Stack<Integer> maxStack = new Stack<Integer>(); 
+	    
+	   // 1    -Push the element x into the stack.
+	   // 2    -Delete the element present at the top of the stack.
+	   // 3    -Print the maximum element in the stack.
 
+	     Scanner scan = new Scanner(System.in);
+	     int N = scan.nextInt();
+	        
+	     for (int i = 0; i < N; i++) {
+	           int query = scan.nextInt();
+	           
+	            switch (query) {
+	                case 1:	 //Push the element x into the stack.
+	                    int element = scan.nextInt();
+	                    stack.push(element);
+	                    if (maxStack.isEmpty() || element >= maxStack.peek()) 
+	                        	maxStack.push(element);
+	                    break;
+	                    
+	                case 2: //Delete the element present at the top of the stack.
+	                    int delete = stack.pop();
+	                    if (delete == maxStack.peek())
+	                        maxStack.pop();
+	                    
+	                    break;
+	                case 3:  //Print the maximum element in the stack
+	                    System.out.println(maxStack.peek());
+	                    break;
+	                    
+	                default:
+	                    break;
+	            }
+	        }        
+	        scan.close();
+	}
 
 }

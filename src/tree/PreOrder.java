@@ -5,17 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-class Node {
-    Node left;
-    Node right;
-    int data;
-    
-    Node(int data) {
-        this.data = data;
-        left = null;
-        right = null;
-    }
-}
+
 
 
 class PreOrder {

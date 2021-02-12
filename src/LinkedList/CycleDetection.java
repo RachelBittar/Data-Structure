@@ -131,10 +131,10 @@ public class CycleDetection {
             boolean result = hasCycle(llist.head);
 
             System.out.println((result ? 1 : 0));
-            bufferedWriter.newLine();
+           // bufferedWriter.newLine();
         }
 
-        bufferedWriter.close();
+       // bufferedWriter.close();
 
         scanner.close();
     }
