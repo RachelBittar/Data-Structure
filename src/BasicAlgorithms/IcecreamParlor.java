@@ -1,28 +1,5 @@
 package BasicAlgorithms;
 
-/*
- * 
- * Sunny and Johnny like to pool their money and go to the ice cream parlor.
- * Johnny never buys the same flavor that Sunny does.
- *  
- * The only other rule they have is that they spend all of their money.
- * Given a list of prices for the flavors of ice cream, 
- * select the two that will cost all of the money they have.
-
- * For example, they have  to spend and there are flavors costing .
- * The two flavors costing  and  meet the criteria. Using -based indexing, 
- * they are at indices  and .
-
-Function Description
-
-It should return an array containing the indices of the prices of 
-the two flavors they buy, sorted ascending.
-
- * 
- * */
-
-
-
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -33,20 +10,40 @@ import java.util.regex.*;
 
 public class IcecreamParlor {
 
-    // Complete the icecreamParlor function below.
-    static int[] icecreamParlor(int m, int[] arr) {
-    	
-    	 System.out.println(Arrays.toString(arr));
-    	 System.out.println("M " + m);
-    	   	 
-    	 return arr;
+     static int[] icecreamParlor(int target, int[] arr) {
+
+        Arrays.sort(arr);
+    
+        int[] soma = {0,0};
+        
+        int front_index = 0;
+        int back_index = arr.length - 1;
+
+        while (front_index < back_index) {
+            int front = arr[front_index];
+            int back = arr[back_index];
+
+            if (front + back == target) {
+              
+                soma[0] = front;
+                soma[1] = back;
+            }
+            
+            if (front + back < target)       // sum < target ==> shift front pointer forward
+                front_index ++; 
+            else
+                back_index --;               // sum > target ==> shift back pointer backward
+        }
+        
+
+        return soma;
 
     }
 
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-       // BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int t = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
@@ -68,23 +65,14 @@ public class IcecreamParlor {
                 arr[i] = arrItem;
             }
 
-            int[] result = icecreamParlor(m, arr);
-            //System.out.println(Arrays.toString(result));
             
-            for (int i = 0; i < result.length; i++) {
-                //bufferedWriter.write(String.valueOf(result[i]));
-
-                if (i != result.length - 1) {
-                   // bufferedWriter.write(" ");
-                }
-            }
-
-           // bufferedWriter.newLine();
+            System.out.println(Arrays.toString((icecreamParlor(m, arr))));
+  
+            //bufferedWriter.newLine();
         }
 
         //bufferedWriter.close();
 
-        scanner.close();
+       
     }
 }
-

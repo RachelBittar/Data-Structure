@@ -11,16 +11,15 @@ public class LeetCode {
 	
 	public static void reverseString(char[] s) {
 
-	   if ((s==null)||(s.length <= 0)) 
-	           System.out.println(s); 
-	        else
-	        { 
-	            System.out.print(s[(s.length-1)]+ " ");
-	            s = Arrays.copyOfRange(s, 0, s.length-1);
-	            reverseString(s); 
-	        } 
-	 
-    }
+		if ((s == null) || (s.length <= 0))
+			System.out.println(s);
+		else {
+			System.out.print(s[(s.length - 1)] + " ");
+			s = Arrays.copyOfRange(s, 0, s.length - 1);
+			reverseString(s);
+		}
+
+	}
 	
 	//{1,2,3,4,5};
 	 public static int[] runningSum(int[] nums) {
