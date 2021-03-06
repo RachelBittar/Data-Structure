@@ -3,11 +3,7 @@ package String;
 public class Check_Permutation {
 
 	public static void main(String[] args) {
-
-		
 		System.out.println(permutation("ab", "eidboaoo"));
-		
-
 	}
 
 	static String sort(String s) {

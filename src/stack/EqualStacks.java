@@ -10,82 +10,114 @@ import java.util.regex.*;
 
 class Result {
 
-    /*
-     * Complete the 'equalStacks' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts following parameters:
-     *  1. INTEGER_ARRAY h1
-     *  2. INTEGER_ARRAY h2
-     *  3. INTEGER_ARRAY h3
-     */
+	/*
+	 * Complete the 'equalStacks' function below.
+	 *
+	 * The function is expected to return an INTEGER. The function accepts following
+	 * parameters: 1. INTEGER_ARRAY h1 2. INTEGER_ARRAY h2 3. INTEGER_ARRAY h3
+	 * 
+	 * 5 3 4 3 2 1 1 1 4 3 2 1 1 4 1
+	 * 
+	 * 
+	 */
 
-    public static int equalStacks(List<Integer> h1, List<Integer> h2, List<Integer> h3) {
-    	
-    Stack<Integer> s1 = new Stack<Integer>();
-    Stack<Integer> s2 = new Stack<Integer>(); 
-    Stack<Integer> s3 = new Stack<Integer>(); 
-    
-    int n1 = 0;
-    int n2 = 0; 
-    int n3 = 0; 
+	public static int equalStacks(List<Integer> h1, List<Integer> h2, List<Integer> h3) {
 
-    int minStack; 
-    
-    
-    	
-    	
-    return 0;
+		int sum1 = 0, sum2 = 0, sum3 = 0;
+		int maxHeight = 0;
 
-    }
+		Stack<Integer> s1 = new Stack<Integer>();
+		Stack<Integer> s2 = new Stack<Integer>();
+		Stack<Integer> s3 = new Stack<Integer>();
+
+		for (int num = h1.size()-1 ; num >-1; num--) {
+			sum1 = sum1 + h1.get(num);
+			s1.push(sum1);
+		}
+
+		for (int num = h2.size()-1 ; num >-1; num--) {
+			sum2 = sum2 + h2.get(num);
+			s2.push(sum2);
+		}
+
+		for (int num = h3.size()-1 ; num >-1; num--) {
+			sum3 = sum3 + h3.get(num);
+			s3.push(sum3);
+		}
+
+		while (!s1.isEmpty() && !s2.isEmpty() && !s3.isEmpty()) {
+
+			int stack1 = s1.peek();
+			int stack2 = s2.peek();
+			int stack3 = s3.peek();
+
+			if (stack1 == stack2 && stack2 == stack3) {
+				maxHeight = s1.peek();
+				break;
+			}
+
+			
+			if (stack1 >= stack2 && stack1 >= stack3) 
+				s1.pop();
+				
+			else if (stack2 >= stack1 && stack2 >= stack3) {
+				s2.pop();
+				
+			} else if (stack3 >= stack1 && stack3 >= stack2) {
+				s3.pop();
+			}
+		}
+
+		return maxHeight;
+
+	}
 
 }
 
 public class EqualStacks {
-    public static void main(String[] args) throws IOException {
-    	
-       // BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-       // bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+	public static void main(String[] args) throws IOException {
 
-       // String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+		// BufferedReader bufferedReader = new BufferedReader(new
+		// InputStreamReader(System.in));
+		// bufferedWriter = new BufferedWriter(new
+		// FileWriter(System.getenv("OUTPUT_PATH")));
 
-    	Scanner in = new Scanner(System.in); 
-        int n1 = in.nextInt();
+		// String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$",
+		// "").split(" ");
 
-        int n2 = in.nextInt();
+		Scanner in = new Scanner(System.in);
+		int n1 = 5;
 
-        int n3 = in.nextInt();
+		int n2 = 3;
 
-        String[] h1Temp = in.nextLine().replaceAll("\\s+$", "").split(" ");
+		int n3 = 4;
 
-        List<Integer> h1 = new ArrayList<>();
+		int[] h1Temp = { 3, 2, 1, 1, 1 };
 
-        for (int i = 0; i < n1; i++) {
-            int h1Item = Integer.parseInt(h1Temp[i]);
-            h1.add(h1Item);
-        }
+		List<Integer> h1 = new ArrayList<>();
 
-        String[] h2Temp = in.nextLine().replaceAll("\\s+$", "").split(" ");
+		for (int i = 0; i < n1; i++) {
+			h1.add(h1Temp[i]);
+		}
 
-        List<Integer> h2 = new ArrayList<>();
+		int[] h2Temp = { 4, 3, 2 };
 
-        for (int i = 0; i < n2; i++) {
-            int h2Item = Integer.parseInt(h2Temp[i]);
-            h2.add(h2Item);
-        }
+		List<Integer> h2 = new ArrayList<>();
 
-        String[] h3Temp = in.nextLine().replaceAll("\\s+$", "").split(" ");
+		for (int i = 0; i < n2; i++) {
+			h2.add(h2Temp[i]);
+		}
 
-        List<Integer> h3 = new ArrayList<>();
+		int[] h3Temp = { 1, 1, 4, 1 };
+		List<Integer> h3 = new ArrayList<>();
 
-        for (int i = 0; i < n3; i++) {
-            int h3Item = Integer.parseInt(h3Temp[i]);
-            h3.add(h3Item);
-        }
+		for (int i = 0; i < n3; i++) {
+			h3.add(h3Temp[i]);
+		}
 
-        int result = Result.equalStacks(h1, h2, h3);
+		int result = Result.equalStacks(h1, h2, h3);
 
-        System.out.println(String.valueOf(result));
-      
-    }
+		System.out.println(String.valueOf(result));
+
+	}
 }

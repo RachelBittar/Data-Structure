@@ -12,25 +12,24 @@ class PreOrder {
 
 	
 
-    public static void preOrder(Node root) {
-    	
-    	if(root!=null) {
-    		
-    		System.out.print(root.data + " ");
-    			
-	    	if (root.left!=null) {
-	    		preOrder(root.left);
+	public static void preOrder(Node root) {
+
+		if (root != null) {
+
+			System.out.print(root.data + " ");
+
+			if (root.left != null) {
+				preOrder(root.left);
 			}
-    	
-	    	if (root.right!=null) {
-	    		preOrder(root.right);
+
+			if (root.right != null) {
+				preOrder(root.right);
 			}
-	
-    	}
-    	else
-    		System.out.println("");
-  
-    }
+
+		} else
+			System.out.println("");
+
+	}
 
 	public static Node insert(Node root, int data) {
         if(root == null) {
