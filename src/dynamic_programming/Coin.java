@@ -1,14 +1,29 @@
 package dynamic_programming;
 
 import java.util.Arrays;
+import java.util.Scanner;
+
 
 public class Coin {
 	
+	static Scanner scan = new Scanner(System.in);
 	
 	public static void main(String[] args) {
+	
+	int N = scan.nextInt();	
+	int coins[] = new int[N];
+	int min = scan.nextInt();	//coin_change(coins, 6);
+	int i=0;	
+
+	 while(i<N){
+		 coins[i]=scan.nextInt();
+		 i++;
+    }
 		
-		int coins[] = {1, 2, 3};
-		coin_change(coins, 6);
+	 int r = coin_change(coins, min);
+	 
+	 System.out.print(r);
+		
 
 	}
 
@@ -20,7 +35,7 @@ public class Coin {
 		   Arrays.fill(memo, amount+1);
 		   memo[0]=0;
 		   
-		  for(int i=0; i<=memo.length;i++) {
+		  for(int i=1; i<memo.length;i++) {
 			  for(int j = 0; j<coins.length; j++) {
 				  
 				  if(coins[j]<=i) {
