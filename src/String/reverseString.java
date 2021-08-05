@@ -4,28 +4,32 @@ import java.util.Scanner;
 
 public class reverseString {
 
+	static int i=0;
 	public static void main(String[] args) {
 		
 		
 	  Scanner sc=new Scanner(System.in);
-	  String A=sc.next();
+	  String orginal=sc.next();
 	  
 	  boolean flag = false;
-	  String r =reverse(A);
+	  String reverse = Reverse(orginal);
 	  
-	  if(r.equals(A))
+	  if(reverse.equals(orginal))
 		  flag = true;
 	  
 	  System.out.print(flag);
 
 	}
 
-	private static String reverse(String string) {
+	private static String Reverse(String org) {
 		
-		 if (string.isEmpty())
-	            return string;
-	       
-	     return reverse(string.substring(1)) + string.charAt(0);
+		
+		 if (org.isEmpty())
+	            return org;
+	     
+		 System.out.print(i+" "+org.substring(1)+"\n");
+		 i++;
+	     return Reverse(org.substring(1)) + org.charAt(0);
 		
 	}
 

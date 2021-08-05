@@ -1,30 +1,31 @@
 package Maps;
 
+import java.util.HashMap;
 
-class HashMap{
-    
-	int num_entries;
-	int key;
-	int value;
-	
-	HashMap(){
-        this.num_entries = 0;
-        		
-	}
-    public void put(int key, int value) {
-    	 this.key = key;
-    	 this.value = value;
-    }
-    
-    public void  get(int key) {
-       this.key = key;
-    }
-    
-    public int size() {
-        return this.num_entries;
-    }
-
-}
+//class HashMap{
+//    
+//	int num_entries;
+//	int key;
+//	int value;
+//	
+//	HashMap(){
+//        this.num_entries = 0;
+//        		
+//	}
+//    public void put(int key, int value) {
+//    	 this.key = key;
+//    	 this.value = value;
+//    }
+//    
+//    public void  get(int key) {
+//       this.key = key;
+//    }
+//    
+//    public int size() {
+//        return this.num_entries;
+//    }
+//
+//}
 
 
 public class HashMapJava {
