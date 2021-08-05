@@ -1,7 +1,7 @@
 package tree;
 
 
-class Node 
+/*class Node 
 { 
     int data; 
     Node left, right; 
@@ -12,7 +12,7 @@ class Node
         left = right = null; 
     } 
 } 
-
+*/
 
 public class BinaryTree 
 { 
@@ -21,29 +21,20 @@ public class BinaryTree
   
  
     boolean isBST()  { 
-        return isBSTUtil(root, 0, 
-                              1000); 
+        return isBSTUtil(root, 
+        		Integer.MIN_VALUE,
+        		Integer.MAX_VALUE); 
     } 
   
   
     boolean isBSTUtil(Node node, int min, int max) 
     { 
-    	
- 
-    	
         if (node == null) 
             return true; 
   
-       
         if (node.data < min || node.data > max) 
             return false; 
   
-     
-    	System.out.println("node: "+ node.data);
-    	
-        System.out.println("min: "+ min);
-    	System.out.println("max: "+ max);
-    	
     	
         return (isBSTUtil(node.left, min, node.data-1) && 
                 isBSTUtil(node.right, node.data+1, max)); 
@@ -60,8 +51,8 @@ public class BinaryTree
         tree.root.left.right = new Node(5); 
   
         if (tree.isBST()) 
-            System.out.println("IS BST"); 
+            System.out.println("Yes"); 
         else
-            System.out.println("Not a BST"); 
+            System.out.println("No"); 
     } 
 } 

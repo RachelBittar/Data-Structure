@@ -8,14 +8,9 @@ public class InsertionSort {
 	private static final Scanner scanner = new Scanner(System.in);
 	private static int[] arr = {120, 8, 7, 5, 2, 0, 1,16, 30};
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {	
 		
-			for(int i=0; i<arr.length;i++) {
-				System.out.print(arr[i]+" ");	
-			}
-			
-			System.out.println();
-			System.out.println("InsertionSort: "+ Arrays.toString(insertionSort(arr)));
+		System.out.println("InsertionSort: "+ Arrays.toString(insertionSort(arr)));
 			
 }
 

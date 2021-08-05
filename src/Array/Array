@@ -1,0 +1,23 @@
+An array is a basic data structure to store a collection of elements 
+sequentially. But elements can be accessed randomly since each element in
+the array can be identified by an array index.
+
+An array can have one or more dimensions. 
+Here we start with the one-dimensional array,
+which is also called the linear array. Here is an example:
+
+In the above example, there are 6 elements in array A.
+That is to say, the length of A is 6.
+We can use A[0] to represent the first element in the array.
+Therefore, A[0] = 6. 
+Similarly, A[1] = 3, 
+A[2] = 8 and so on.
+
+As we mentioned in the previous article, an array has a fixed capacity and we
+need to specify the size of the array when we initialize it.
+Sometimes this will be somewhat inconvenient and wasteful.
+
+Therefore, most programming languages offer built-in dynamic array
+which is still a random access list data structure but with variable size.
+For example, we have vector in C++ and *ArrayList* in Java.
+

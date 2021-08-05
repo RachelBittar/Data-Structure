@@ -3,54 +3,37 @@ package tree;
 import java.util.*;
 import java.io.*;
 
-class Node {
-    Node left;
-    Node right;
-    int data;
-    
-    Node(int data) {
-        this.data = data;
-        left = null;
-        right = null;
-    }
-}
-
 class TopView {
 
+	
+	public static void leftNode(Node left){
+        if(left!=null){
+            leftNode(left.left);
+        System.out.print(left.data+ " ");
+        }
 
+    }
+    public static void rightNode(Node right){
+        if(right!=null){
+            System.out.print(right.data+ " ");
+            rightNode(right.right);
+        }
+
+    }
 	public static void topView(Node root) {
+        if(root!=null){
+        
+        leftNode(root.left);
+        System.out.print(root.data+" ");
+        rightNode(root.right);
+        
+        }
+       
       
-      List<Integer> visit_order= new ArrayList<Integer>();
-      Queue<Node> q = new LinkedList<>();
-        
-        Node nodeL = root;
-        q.add(nodeL);
-        
-        while(q.size()>0) {
-            
-            nodeL = (Node) q.remove();
-            visit_order.add(nodeL.data);
-            
-            if(nodeL.left!=null)
-                q.add(nodeL.left);        
-        }
-        
-       Node nodeR = root.right;
-        q.add(nodeR);
-        
-        while(q.size()>0) {
-            
-            nodeR = (Node) q.remove();
-            visit_order.add(nodeR.data);
-            
-            if(nodeR.right!=null)
-                q.add(nodeR.right);    
-        }
-
-        System.out.println(Arrays.toString(visit_order.toArray()));
-
       
     }
+
+	
 
 	public static Node insert(Node root, int data) {
         if(root == null) {
@@ -67,10 +50,14 @@ class TopView {
             return root;
         }
     }
-
+	
+	
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int t = scan.nextInt();
+        String s = scan.next();
+        s += scan.nextLine();
+        
         Node root = null;
         while(t-- > 0) {
             int data = scan.nextInt();

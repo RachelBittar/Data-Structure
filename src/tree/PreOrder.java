@@ -5,42 +5,31 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-class Node {
-    Node left;
-    Node right;
-    int data;
-    
-    Node(int data) {
-        this.data = data;
-        left = null;
-        right = null;
-    }
-}
+
 
 
 class PreOrder {
 
 	
 
-    public static void preOrder(Node root) {
-    	
-    	if(root!=null) {
-    		
-    		System.out.print(root.data + " ");
-    			
-	    	if (root.left!=null) {
-	    		preOrder(root.left);
+	public static void preOrder(Node root) {
+
+		if (root != null) {
+
+			System.out.print(root.data + " ");
+
+			if (root.left != null) {
+				preOrder(root.left);
 			}
-    	
-	    	if (root.right!=null) {
-	    		preOrder(root.right);
+
+			if (root.right != null) {
+				preOrder(root.right);
 			}
-	
-    	}
-    	else
-    		System.out.println("");
-  
-    }
+
+		} else
+			System.out.println("");
+
+	}
 
 	public static Node insert(Node root, int data) {
         if(root == null) {
